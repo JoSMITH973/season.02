@@ -16,7 +16,15 @@ const fs = require('fs');
     // streambox(filename);
     
 //streambox .episode_04
-    const streambox =  require('./.episode_04/streambox');
+    // const streambox =  require('./.episode_04/streambox');
+    // filename = process.argv[2];
+    // streambox(filename);
+    
+//streambox .episode_05
+    const streambox =  require('./.episode_05/streambox');
     filename = process.argv[2];
-    streambox(filename);
+    const re = /[a-z]/g;
+    const fn = (letter) => letter.toUpperCase();
+    streambox(filename, re, fn);
+    
 

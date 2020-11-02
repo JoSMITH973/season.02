@@ -1,2 +1,2 @@
-This  file is an example. 
-Ce fichier est un example.
+This file is an example. 
+Ce fichier est un exemple.
