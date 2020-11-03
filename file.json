@@ -1,0 +1,20 @@
+[
+  {
+    "name": "Frédéric Chopin",
+    "birth": "1810-03-01",
+    "death": "1849-10-17",
+    "activities": [
+      "composer",
+      "pianist"
+    ]
+  },
+  {
+    "name": "Jerome Rotten",
+    "birth": "1945-01-15",
+    "death": "1995-12-13",
+    "activities": [
+      "player",
+      "footballer"
+    ]
+  }
+]

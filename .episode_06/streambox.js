@@ -4,6 +4,8 @@ const EventEmiter = require('events');
 const readline = require('readline');
 const csv = require('csvtojson');
 
+
+// Correction
 module.exports = function csv2json(filename) {
   const input = fs.createReadStream(filename)
   const rl = readline.createInterface({input})
@@ -13,26 +15,42 @@ module.exports = function csv2json(filename) {
   let header= []
   let records= []
 
-  rl.on('line', (line) => {
-      if (lineCount === 0) {
-      // Header
-      header=line.split(';')
-    }
-    else {
-      // Data
-      const record = {};
-      const values = line.split(';');
-      for (let i = 0; i< values.length;i++) {
-        const key = header[i];
-        const value = values[i];
+  rl.on('line', (line, i) => {
+    if (lineCount === 0) {
+      headers = line.split(';')
+    } else {
+      const record = {}
 
-        record[key] = value;
-      }
-      // lineCount++
-      console.log(record);
+      line.split(';').forEach((value, i) => {
+        const key = headers[i]
+        // console.log(value);
+        
+        if (value.includes(',')) {
+          record[key] = value.split(',')
+        } else {
+          record[key] = value
+        }
+      })
+      
+      records.push(record)
     }
+
+    lineCount++
+  })
+
+  rl.on('close', () => {
+    const { name } = path.parse(filename)
+
+    fs.writeFile(`${name}.json`, JSON.stringify(records, null, 2), (err) => {
+      if(err) {
+        return console.log(err);
+      }
+
+      console.log(`${filename} converted to json: ${name}.json`)
+    })
   })
 }
+
 
 // module.exports = function csv2json(filename) {
 // csv()
