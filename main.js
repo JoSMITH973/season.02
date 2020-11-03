@@ -1,30 +1,41 @@
 const fs = require('fs');
 
-//eventbox .episode_01
+//exercice .episode_01
     // const eventbox = require('./.episode_01/eventbox');
     // eventbox();
 
-//eventbox .episode_02
+//exercice .episode_02
     // const eventbox = require('./.episode_02/eventbox');
     // let text = 'Claude, Alan, Danny, Joan';
     // let array = text.split(', ');
     // eventbox(array);
 
-//streambox .episode_03
+//exercice .episode_03
     // const streambox =  require('./.episode_03/streambox');
     // filename = process.argv[2];
     // streambox(filename);
     
-//streambox .episode_04
+//exercice .episode_04
     // const streambox =  require('./.episode_04/streambox');
+    // filename = process.argv[2];
+    // const re = /[a-z]/g;
+    // const fn = (letter) => letter.toUpperCase();
+    // streambox(filename, re, fn, true);
+    
+//exercice .episode_05
+    // const streambox =  require('./.episode_05/streambox');
+    // filename = process.argv[2];
+    // const re = /[a-z]/g;
+    // const fn = (letter) => letter.toUpperCase();
+    // streambox(filename, re, fn, false);
+
+//exercice .episode_06
+    // const streambox =  require('./.episode_06/streambox');
     // filename = process.argv[2];
     // streambox(filename);
     
-//streambox .episode_05
-    const streambox =  require('./.episode_05/streambox');
-    filename = process.argv[2];
-    const re = /[a-z]/g;
-    const fn = (letter) => letter.toUpperCase();
-    streambox(filename, re, fn);
+//exercice .episode_07
+    const streambox =  require('./.episode_07/WTFIsThisPipe');
+    filename = ('./main.js');
+    streambox(filename);
     
-

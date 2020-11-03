@@ -23,9 +23,18 @@ module.exports = function transform(filename, re, fn) {
 
 // Correction
 
-    // const transformer =new Transform({
-    //     transform(chunk, _, callback) {
-    //         this.push(chunk.toString().replace(re,fn));
-    //         callback();
-    //     }
-    // });
+// module.exports = function transform(filename, re, fn, in_stdout = true) {
+//     const transformer = new Transform({
+//       transform(chunk, _, callback) {
+//         this.push(chunk.toString().replace(re, fn))
+  
+//         callback()
+//       }
+//     })
+  
+//     const readStream = fs.createReadStream(filename)
+    
+//     readStream
+//       .pipe(transformer)
+//       .pipe(process.stdout)
+//   }
