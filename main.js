@@ -30,12 +30,12 @@ const fs = require('fs');
     // streambox(filename, re, fn, false);
 
 //exercice .episode_06
-    // const streambox =  require('./.episode_06/streambox');
-    // filename = process.argv[2];
-    // streambox(filename);
+    const streambox =  require('./.episode_06/streambox');
+    filename = process.argv[2];
+    streambox(filename);
     
 //exercice .episode_07
-    const streambox =  require('./.episode_07/WTFIsThisPipe');
-    filename = ('./main.js');
-    streambox(filename);
+    // const streambox =  require('./.episode_07/WTFIsThisPipe');
+    // filename = ('./main.js');
+    // streambox(filename);
     
